@@ -39,7 +39,7 @@ The goal of this project is to make the easiest, fastest, and most painless way 
 
 ## Installation
 
-Installation can be done with 'one-click' using [docker-compose](https://github.com/ForxaCoLab/forxacolab/blob/master/docker-compose.yml) or following these methods:
+Installation can be done with 'one-click' using [docker-compose](https://github.com/ForxaCoLab/forxa/blob/master/docker-compose.yml) or following these methods:
 
 Make sure you install the [prerequisites](https://gogs.io/docs/installation) first.
 
