@@ -6,10 +6,10 @@
 </head>
 
 <body>
-	<p>Hi <b>{{.Username}}</b>,</p>
-	<p>Please click the following link to verify your email address within <b>{{.ActiveCodeLives}} hours</b>:</p>
+	<p>Ola <b>{{.Username}}</b>,</p>
+	<p>Por favor fai click na seguinte ligazón para verificar o teu correo electrónico en <b>{{.ActiveCodeLives}} horas</b>:</p>
 	<p><a href="{{AppURL}}user/activate_email?code={{.Code}}&email={{.Email}}">{{AppURL}}user/activate_email?code={{.Code}}&email={{.Email}}</a></p>
-	<p>Not working? Try copying and pasting it to your browser.</p>
+	<p>Non funciona? Proba a copiar e colar no teu navegador de internet.</p>
 	<p>© 2017 <a target="_blank" href="{{AppURL}}">{{AppName}}</a></p>
 </body>
 </html>

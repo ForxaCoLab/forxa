@@ -4,8 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	{{if not .PageIsAdmin}}
-		<meta name="author" content="{{if .Repository}}{{.Owner.Name}}{{else}}Gogs{{end}}" />
-		<meta name="description" content="{{if .Repository}}{{.Repository.Name}}{{if .Repository.Description}} - {{.Repository.Description}}{{end}}{{else}}Gogs is a painless self-hosted Git service{{end}}" />
+		<meta name="author" content="{{if .Repository}}{{.Owner.Name}}{{else}}A Forxa do Co-Lab{{end}}" />
+		<meta name="description" content="{{if .Repository}}{{.Repository.Name}}{{if .Repository.Description}} - {{.Repository.Description}}{{end}}{{else}}Explora e colabora no código fonte do Co-Lab{{end}}" />
 		<meta name="keywords" content="go, git, self-hosted, gogs">
 	{{end}}
 	<meta name="referrer" content="no-referrer" />
@@ -30,7 +30,7 @@
 		<meta property="og:url" content="{{AppURL}}" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="{{AppName}}">
-		<meta property="og:description" content="Gogs is a painless self-hosted Git service.">
+		<meta property="og:description" content="Explora e colabora no código fonte do Co-Lab.">
 		<meta property="og:image" content="{{AppURL}}img/gogs-lg.png" />
 		<meta property="og:site_name" content="Gogs">
 	{{end}}
@@ -88,12 +88,14 @@
 
 								{{if .IsLogged}}
 									<a class="item{{if .PageIsDashboard}} active{{end}}" href="{{AppSubURL}}/">{{.i18n.Tr "dashboard"}}</a>
+                                    <!-- commented to remove issues and pull requests from home page 
 									<a class="item{{if .PageIsIssues}} active{{end}}" href="{{AppSubURL}}/issues">{{.i18n.Tr "issues"}}</a>
-									<a class="item{{if .PageIsPulls}} active{{end}}" href="{{AppSubURL}}/pulls">{{.i18n.Tr "pull_requests"}}</a>
+									<a class="item{{if .PageIsPulls}} active{{end}}" href="{{AppSubURL}}/pulls">{{.i18n.Tr "pull_requests"}}</a> -->
 								{{else}}
 									<a class="item{{if .PageIsHome}} active{{end}}" href="{{AppSubURL}}/">{{.i18n.Tr "home"}}</a>
 								{{end}}
 
+                                <a class="item" href="{{AppSubUrl}}/Co-Lab">Co-Lab Repos</a>
 								<a class="item{{if .PageIsExplore}} active{{end}}" href="{{AppSubURL}}/explore/repos">{{.i18n.Tr "explore"}}</a>
 								{{/*<div class="item">
 									<div class="ui icon input">
