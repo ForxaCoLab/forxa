@@ -5,6 +5,7 @@
 log/
 custom/
 data/
+db/
 .vendor/
 .idea/
 *.iml

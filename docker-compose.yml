@@ -1,24 +1,23 @@
-lets-nginx:
-    links:
-        - gogs:backend
-    environment:
-        - EMAIL=user@domain.com
-        - DOMAIN=forxa.colab.coruna.gal
-        - UPSTREAM=backend:3000
-    ports:
-        - "80:80"
-        - "443:443"
-    image: smashwilson/lets-nginx
-    volumes:
-        - ./certs:/etc/letsencrypt
-    restart: unless-stopped
+#lets-nginx:
+#    links:
+#        - gogs:backend
+#    environment:
+#        - EMAIL=user@domain.com
+#        - DOMAIN=forxa.colab.coruna.gal
+#        - UPSTREAM=gogs:3000
+#    ports:
+#        - "80:80"
+#        - "443:443"
+#    image: smashwilson/lets-nginx
+#    volumes:
+#        - ./certs:/etc/letsencrypt
+#    restart: unless-stopped
 
 gogs:
     image: dalareo/forxa:latest
-    expose:
-        - "3000"
     ports:
         - "10022:22"
+        - "3000:3000"
     links:
        - mysql:db
     volumes:
