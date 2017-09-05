@@ -14,7 +14,7 @@ lets-nginx:
     restart: unless-stopped
 
 gogs:
-    image: dalareo/forxacolab:latest
+    image: dalareo/forxa:latest
     expose:
         - "3000"
     ports:
